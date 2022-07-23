@@ -1,5 +1,4 @@
 const { Thought, User} = require('../models');
-const { getUsersById } = require('./user-controller');
 
 const thoughtController = {
     getAllThoughts(req, res) {
@@ -10,7 +9,7 @@ const thoughtController = {
         })
         .select('-__v')
         .sort({ _id: -1 })
-        .then(dbThoughtData = res.json(dbThoughtData))
+        .then(dbThoughtData => res.json(dbThoughtData))
         .catch(err => {
             console.log(err);
             res.status(500).json(err);
