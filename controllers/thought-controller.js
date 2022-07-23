@@ -41,7 +41,7 @@ const thoughtController = {
         })
         .then(dbThoughtData => {
             if(!dbThoughtData) {
-                res.status(404).json({message: 'no thoughs match that id'});
+                res.status(404).json({message: 'no thoughts match that id'});
                 return;
             }
             res.json(dbThoughtData)
