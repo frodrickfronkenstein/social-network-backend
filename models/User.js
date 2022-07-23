@@ -14,7 +14,7 @@ const UserSchema = new Schema({
         // copied and pasted regex from lesson 17 challenge
         match:[/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/]
     },
-    thoughts: [
+    thought: [
         {
             type: Schema.Types.ObjectId,
             ref: "Thought"
